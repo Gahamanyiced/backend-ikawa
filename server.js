@@ -13,8 +13,8 @@ import hpp from 'hpp';
 import cors from 'cors';
 import color from 'colors';
 import fileUpload from 'express-fileupload';
-
 import path from 'path';
+
 import { connectDB } from './src/database/config/db.js';
 
 const app = express();
@@ -63,14 +63,14 @@ const PORT = process.env.PORT;
 app.listen(
   PORT,
   console.log(
-    `Server running in ${process.env.NODE_ENV} mode on PORT ${PORT}`.yellow
+    `Server running in ${process.env.NODE_ENV} mode on PORT ${PORT}`
   )
 );
 
-// Handle unhandled promise rejections
-process.on('unhandledRejection', (err, promise) => {
-  console.log(`Error: ${err.message}`.red);
+// // // Handle unhandled promise rejections
+// // process.on('unhandledRejection', (err, promise) => {
+// //   console.log(`Error: ${err.message}`.red);
 
-  // close server & exit process
-  server.close(() => process.exit(1));
-});
+// //   // close server & exit process
+// //   server.close(() => process.exit(1));
+// });
